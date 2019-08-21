@@ -62,7 +62,7 @@ function createFullTask (value) {
     tasksList.appendChild(newLi);
 }
 
-//ADD TASK FUNC with ADDING TO STORE
+//ADD TASK FUNC with ADDING TO LS
 function addTask (e) {
 
 
@@ -73,7 +73,7 @@ function addTask (e) {
     //Create task(DOM)
     createFullTask(taskInput.value)
 
-    //ADD TO STORE
+    //ADD TO LS
     addToStore(taskInput.value);
 
     //Clear INPUT
@@ -108,6 +108,9 @@ function clearTasks (e) {
         //     tasksList.removeChild(tasksList.firstChild);
         // }
     }
+
+    //clear LS
+    localStorage.clear();
 }
 
 //FILTER TASKS FUNC
@@ -167,7 +170,7 @@ function getTasks () {
     })
 }
 
-//REMOVE TASK FROM STORE
+//REMOVE TASK FROM LS
 function removeTaskFromStore (item) {
 
     let tasks;
